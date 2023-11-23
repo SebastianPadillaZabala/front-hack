@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
 import { SensorComponent } from './pages/sensor/sensor.component';
+import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SensorComponent } from './pages/sensor/sensor.component';
     InicioComponent,
     RegistrarComponent,
     SensorComponent,
+    LayoutPageComponent,
   ],
   imports: [
     BrowserModule,
