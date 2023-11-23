@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowComponent } from './pages/show/show.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { ShowComponent } from './pages/show/show.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+
     MaterialModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
