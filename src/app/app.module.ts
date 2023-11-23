@@ -8,6 +8,10 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
 import { SensorComponent } from './pages/sensor/sensor.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
+import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShowComponent } from './pages/show/show.component';
 
 
 @NgModule({
@@ -17,12 +21,17 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
     RegistrarComponent,
     SensorComponent,
     LayoutPageComponent,
+    ShowComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
 
+    MaterialModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
