@@ -9,6 +9,8 @@ import { RegistrarComponent } from './pages/registrar/registrar.component';
 import { SensorComponent } from './pages/sensor/sensor.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
