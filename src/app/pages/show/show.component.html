@@ -1,25 +1,38 @@
-<div class="card-wrapper">
+<div class="w-full h-full pt-8 md:pt-20 grid grid-cols-2">
+    <div class="grid col-span-1 justify-items-end">
+      <div class="w-full h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 pt-2">
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title>{{formulario.nombre}}</mat-card-title>
-      <mat-card-subtitle>
-        Learn Web Development with Easy Tutorials
-      </mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image style="width: 150px;" [src]="formulario.imagen">
-    <mat-card-content>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
-      </p>
-    </mat-card-content>
+        <mat-card class="example-card ">
+          <mat-card-header class="w-full">
+            <div class="w-full text-center">
+              <mat-card-title class="text-4xl">{{formulario.nombre}}</mat-card-title>
+              <mat-card-subtitle class="text-2xl">
+                Puerto: {{formulario.puerto}}
+              </mat-card-subtitle>
+            </div>
+          </mat-card-header>
+          <img mat-card-image class="p-8 rounded-t-lg w-full" [src]="formulario.imagen">
+          <mat-card-content>
+            <p>
+              Longitud: {{formulario.longitud.toString()}} <br>
+              Latitud: {{formulario.latitud.toString()}}
+            </p>
+          </mat-card-content>
 
-    <mat-card-actions>
-      <button mat-raised-button color="accent">LIKE</button>
-      <button mat-raised-button color="primary">SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+          <mat-card-actions>
+            <a href="https://firms.modaps.eosdis.nasa.gov/map/#d:today;@-63.1,-17.8,10.9z" target="_blank">
+              <button  mat-raised-button color="accent" >Ver Foco de Calor</button>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+
+      </div>
+    </div>
+    <div class="col-span-1 justify-items-start">
+      <div class="w-full h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 pt-2">
+        <shared-mapa [alto]="96" [ancho]="80" [latitud]="formulario.latitud" [longitud]="formulario.longitud"/>
+      </div>
+    </div>
 
 </div>
+
