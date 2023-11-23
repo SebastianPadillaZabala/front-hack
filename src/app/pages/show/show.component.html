@@ -20,7 +20,7 @@
           </mat-card-content>
 
           <mat-card-actions class="flex justify-center">
-              <a href="https://firms.modaps.eosdis.nasa.gov/map/#d:today;@-63.1,-17.8,10.9z" target="_blank">
+              <a class="bg-amber-600 hover:bg-amber-800" href="https://firms.modaps.eosdis.nasa.gov/map/#d:today;@-63.1,-17.8,10.9z" target="_blank">
                 <button  mat-raised-button color="accent" >Ver Foco de Calor</button>
               </a>
           </mat-card-actions>
@@ -33,6 +33,7 @@
         <shared-mapa [alto]="'[32rem]'" [ancho]="'[28rem]'" [latitud]="formulario.latitud" [longitud]="formulario.longitud"/>
       </div>
     </div>
+    <shared-tabla-datos-sensor></shared-tabla-datos-sensor>
 
 </div>
 
