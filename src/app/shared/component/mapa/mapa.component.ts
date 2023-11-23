@@ -16,9 +16,9 @@ import { ElementRef, ViewChild, Renderer2 } from '@angular/core'
 export class MapaComponent implements OnInit{
 
   @Input()
-  alto!: number;
+  alto!: String;
   @Input()
-  ancho!: number;
+  ancho!: String;
   @Input()
   latitud!: number;
   @Input()
