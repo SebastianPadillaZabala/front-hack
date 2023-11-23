@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
+import { ShowComponent } from './pages/show/show.component';
 
 const routes: Routes = [
   // {
@@ -26,6 +27,10 @@ const routes: Routes = [
       {
         path: 'registrar-sensor',
         component: RegistrarComponent
+      },
+      {
+        path: 'show-sensor/:id',
+        component: ShowComponent
       },
       {
         path: '',
