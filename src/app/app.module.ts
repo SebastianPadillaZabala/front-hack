@@ -8,6 +8,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
 import { SensorComponent } from './pages/sensor/sensor.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
+import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
