@@ -1,6 +1,6 @@
 ///<reference path="../../../../../node_modules/@types/googlemaps/index.d.ts"/>
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms'
 import { ElementRef, ViewChild, Renderer2 } from '@angular/core'
 
@@ -11,8 +11,9 @@ import { ElementRef, ViewChild, Renderer2 } from '@angular/core'
 })
 export class MapaComponent implements OnInit{
 
-
+  @Input()
   alto: number = 52;
+  @Input()
   ancho: number = 96;
 
   @ViewChild('divMap') divMap!: ElementRef;
