@@ -5,17 +5,17 @@
         <mat-card class="example-card ">
           <mat-card-header class="w-full">
             <div class="w-full text-center">
-              <mat-card-title class="text-4xl">{{formulario.nombre}}</mat-card-title>
+              <mat-card-title class="text-4xl">{{sensor.nombre}}</mat-card-title>
               <mat-card-subtitle class="text-2xl">
-                Puerto: {{formulario.puerto}}
+                Puerto: {{sensor.puerto}}
               </mat-card-subtitle>
             </div>
           </mat-card-header>
-          <img mat-card-image class="p-8 rounded-t-lg w-full" [src]="formulario.imagen">
+          <img mat-card-image class="p-8 rounded-t-lg w-full" [src]="sensor.imagen">
           <mat-card-content>
             <p>
-              Longitud: {{formulario.longitud.toString()}} <br>
-              Latitud: {{formulario.latitud.toString()}}
+              Longitud: {{sensor.longitud}} <br>
+              Latitud: {{sensor.latitud}}
             </p>
           </mat-card-content>
 
@@ -30,7 +30,7 @@
     </div>
     <div class="col-span-1 justify-items-start">
       <div class="w-full h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow pt-2">
-        <shared-mapa [alto]="'[32rem]'" [ancho]="'[28rem]'" [latitud]="formulario.latitud" [longitud]="formulario.longitud"/>
+        <shared-mapa [alto]="'[32rem]'" [ancho]="'[28rem]'" [latitud]="latitud" [longitud]="longitud"/>
       </div>
     </div>
     <shared-tabla-datos-sensor class="flex justify-center col-span-2"></shared-tabla-datos-sensor>
