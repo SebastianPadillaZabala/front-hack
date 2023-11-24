@@ -12,6 +12,7 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowComponent } from './pages/show/show.component';
+import { MapaPageComponent } from './pages/mapa-page/mapa-page.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ShowComponent } from './pages/show/show.component';
     SensorComponent,
     LayoutPageComponent,
     ShowComponent,
+    MapaPageComponent,
   ],
   imports: [
     BrowserModule,

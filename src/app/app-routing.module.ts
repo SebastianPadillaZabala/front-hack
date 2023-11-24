@@ -4,17 +4,9 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
 import { ShowComponent } from './pages/show/show.component';
+import { MapaPageComponent } from './pages/mapa-page/mapa-page.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: 'inicio',
-  //   pathMatch: 'full'
-  // },
-  // {
-  //   path: 'inicio',
-  //   component: InicioComponent
-  // },
 
   {
     path: '',
@@ -31,6 +23,10 @@ const routes: Routes = [
       {
         path: 'show-sensor/:id',
         component: ShowComponent
+      },
+      {
+        path: 'mapa',
+        component: MapaPageComponent
       },
       {
         path: '',
