@@ -11,7 +11,9 @@ import { ServicesService } from 'src/app/services/services.service';
 export class InicioComponent implements OnInit {
   public sensores: Sensor[] = [];
 
-  constructor(private route: Router, private sensorService: ServicesService) { }
+  public isModal : boolean = true;
+
+  constructor( private route : Router, private sensorService: ServicesService) {}
 
   ngOnInit(): void {
     this.sensorService.getAll().subscribe(resp => {
@@ -24,6 +26,11 @@ export class InicioComponent implements OnInit {
   redirectToShow(id: number) {
     console.log(id);
     this.route.navigate([`/show-sensor/${id.toString()}`]);
+  }
+
+
+  recibirClose(isClose : boolean){
+    this.isModal = !isClose;
   }
 
 }
