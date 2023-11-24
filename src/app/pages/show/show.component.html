@@ -1,6 +1,6 @@
 <div class="w-full h-full pt-8 md:pt-20 grid grid-cols-2">
     <div class="grid col-span-1 justify-items-end">
-      <div class="w-full h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow pt-2">
+      <div class="w-full h-full max-w-sm bg-white rounded-lg">
 
         <mat-card class="example-card ">
           <mat-card-header class="w-full">
@@ -29,8 +29,8 @@
       </div>
     </div>
     <div class="col-span-1 justify-items-start">
-      <div class="w-full h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow pt-2">
-        <shared-mapa *ngIf="hasLoaded" [alto]="'[32rem]'" [ancho]="'[28rem]'" [latitud]="latitud" [longitud]="longitud"/>
+      <div class="w-full h-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+        <shared-mapa *ngIf="hasLoaded" [alto]="'[28rem]'" [ancho]="'[24rem]'" [latitud]="latitud" [longitud]="longitud"/>
       </div>
     </div>
     <shared-tabla-datos-sensor class="flex justify-center col-span-2"></shared-tabla-datos-sensor>
