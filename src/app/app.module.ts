@@ -15,6 +15,7 @@ import { ShowComponent } from './pages/show/show.component';
 import { MapaPageComponent } from './pages/mapa-page/mapa-page.component';
 import { ServicesService } from './services/services.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TestPageComponent } from './pages/test-page/test-page.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     LayoutPageComponent,
     ShowComponent,
     MapaPageComponent,
+    TestPageComponent,
   ],
   imports: [
     BrowserModule,
