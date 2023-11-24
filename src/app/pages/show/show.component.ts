@@ -30,10 +30,8 @@ export class ShowComponent implements OnInit {
       this.latitud = Number.parseFloat(this.sensor.latitud.valueOf());
       this.longitud = Number.parseFloat(this.sensor.longitud.valueOf());
       console.log( this.latitud + "|||" + this.longitud);
-    });
-    setTimeout( () =>{
       this.hasLoaded = true;
-    }, 5000 );
+    });
   }
 
 
