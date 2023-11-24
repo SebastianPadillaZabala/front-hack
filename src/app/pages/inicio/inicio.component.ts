@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
+
+  constructor(private route : Router){
+
+  }
+
+  redirectToShow(id : number){
+    this.route.navigate(['/show-sensor/12']);
+  }
 
 }

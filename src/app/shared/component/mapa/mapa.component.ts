@@ -11,8 +11,6 @@ import { ElementRef, ViewChild, Renderer2 } from '@angular/core'
 
 })
 
-
-
 export class MapaComponent implements OnInit{
 
   @Input()
@@ -39,13 +37,6 @@ export class MapaComponent implements OnInit{
   }
 
   ngAfterViewInit(): void {
-
-    const opciones = {
-      enableHighAccuracy: false,
-      timeout: 5000,
-      maximumAge: 0
-    }
-
     this.cargarMapa({ lat: this.latitud, lng: this.longitud });
   };
 
@@ -66,11 +57,6 @@ export class MapaComponent implements OnInit{
     markerPosition.setMap(this.mapa);
     this.markers.push(markerPosition);
 
-
-    google.maps.event.addListener(this.mapa, 'click', (evento: google.maps.MapMouseEvent) => {
-      print();
-
-    })
   };
 
 
