@@ -4,6 +4,7 @@ import { NavComponent } from './component/nav/nav.component';
 import { CardSensoresComponent } from './component/card-sensores/card-sensores.component';
 import { MapaComponent } from './component/mapa/mapa.component';
 import { TablaDatosSensorComponent } from './component/tabla-datos-sensor/tabla-datos-sensor.component';
+import { ModalAlertaComponent } from './component/modal-alerta/modal-alerta.component';
 
 
 
@@ -13,6 +14,7 @@ import { TablaDatosSensorComponent } from './component/tabla-datos-sensor/tabla-
     CardSensoresComponent,
     MapaComponent,
     TablaDatosSensorComponent,
+    ModalAlertaComponent,
   ],
   imports: [
     CommonModule
@@ -21,7 +23,8 @@ import { TablaDatosSensorComponent } from './component/tabla-datos-sensor/tabla-
     NavComponent,
     CardSensoresComponent,
     MapaComponent,
-    TablaDatosSensorComponent
+    TablaDatosSensorComponent,
+    ModalAlertaComponent
   ]
 })
 export class SharedModule { }
