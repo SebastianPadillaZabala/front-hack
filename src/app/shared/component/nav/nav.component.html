@@ -1,22 +1,21 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <div
-      class="w-full h-18 py-2 text-gray-100 bg-red-50 bg-cover bg-center shadow-lg" style="background-image: url('assets/img/bg.png');">
+<div class="w-full h-18 py-2 text-gray-100 bg-red-50 bg-cover bg-center shadow-lg"
+  style="background-image: url('assets/img/bg.png');">
 
-      <div x-data="{ open: false }"
-        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 ">
-        <a routerLink="#" href="#">
-          <img class="h-8 lg:h-11" src="assets/img/log.png">
-        </a>
-        <nav :class="{'flex': open, 'hidden': !open}"
-          class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-100 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline cursor-pointer"
-          (click)="redirigir('inicio')">Inicio</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline cursor-pointer"
-          (click)="redirigir('registrar')">Registrar Sensor</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline cursor-pointer"
-          (click)="redirigir('mapa')">Mapa de sensores</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline cursor-pointer"
-            href="#">Contact</a>
-        </nav>
-      </div>
-    </div>
+  <div x-data="{ open: false }"
+    class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 ">
+    <a routerLink="#" href="#">
+      <img class="h-8 lg:h-11" src="assets/img/log.png">
+    </a>
+    <nav :class="{'flex': open, 'hidden': !open}"
+      class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-100 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline cursor-pointer"
+        (click)="redirigir('inicio')">Inicio</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline cursor-pointer"
+        (click)="redirigir('registrar')">Registrar Sensor</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline cursor-pointer"
+        (click)="redirigir('mapa')">Mapa de sensores</a>
+
+    </nav>
+  </div>
+</div>

@@ -1,14 +1,21 @@
-<table class="bg-white min-w-full text-center text-sm font-light">
-  <thead class="border-b font-medium">
-    <tr>
-      <th scope="col" class="px-6 py-4">ID</th>
-      <th scope="col" class="px-6 py-4">Valor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr  *ngFor="let dato of datos">
-      <td class="whitespace-nowrap px-6 py-4">{{ dato.id }}</td>
-      <td class="whitespace-nowrap px-6 py-4">{{ dato.valor }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="w-full h-full max-w-xl bg-white border border-gray-200 rounded-lg shadow">
+  <p class="text-center text-2xl font-bold py-2">Historial de datos</p>
+  <table class="bg-white min-w-full text-center text-sm font-light">
+    <thead class="border-b font-medium">
+      <tr>
+        <th scope="col" class="px-6 py-4">ID</th>
+        <th scope="col" class="px-6 py-4">Fecha</th>
+        <th scope="col" class="px-6 py-4">Hora</th>
+        <th scope="col" class="px-6 py-4">Valor</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr *ngFor="let dato of datos">
+        <td class="whitespace-nowrap px-6 py-4">{{ dato.id }}</td>
+        <td class="whitespace-nowrap px-6 py-4">{{ dato.fecha }}</td>
+        <td class="whitespace-nowrap px-6 py-4">{{ dato.hora }}</td>
+        <td class="whitespace-nowrap px-6 py-4">{{ dato.valor }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

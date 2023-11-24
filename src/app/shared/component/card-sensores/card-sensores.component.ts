@@ -30,6 +30,7 @@ export class CardSensoresComponent implements OnInit {
   color!: string;
   color_temp!: string;
   estado!: string;
+  alert: boolean = false;
 
   public hasLoaded: boolean = false;
   private socket: any;
@@ -47,6 +48,8 @@ export class CardSensoresComponent implements OnInit {
       this.colorTempHandler(this.valor_temp);
       this.valor_temp += '°';
       this.estado = this.estadoHandler(data.valor);
+      if (!this.alert)
+        this.alert = +data.valor > 300 && data.sensor_id == 1;
     });
     this.longitud = Number.parseFloat(this.sensor.longitud.valueOf());
     this.latitud = Number.parseFloat(this.sensor.latitud.valueOf());
