@@ -8,20 +8,20 @@ import { ServicesService } from 'src/app/services/services.service';
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
-export class InicioComponent implements OnInit{
+export class InicioComponent implements OnInit {
   public sensores: Sensor[] = [];
 
-  constructor( private route : Router, private sensorService: ServicesService) {}
+  constructor(private route: Router, private sensorService: ServicesService) { }
 
   ngOnInit(): void {
-    this.sensorService.getAll().subscribe(resp =>{
+    this.sensorService.getAll().subscribe(resp => {
       if (!resp) return;
       this.sensores = resp;
       console.log(this.sensores);
     });
   }
 
-  redirectToShow(id : number){
+  redirectToShow(id: number) {
     console.log(id);
     this.route.navigate([`/show-sensor/${id.toString()}`]);
   }
