@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from './component/nav/nav.component';
 import { CardSensoresComponent } from './component/card-sensores/card-sensores.component';
 import { MapaComponent } from './component/mapa/mapa.component';
+import { TablaDatosSensorComponent } from './component/tabla-datos-sensor/tabla-datos-sensor.component';
 
 
 
@@ -10,7 +11,8 @@ import { MapaComponent } from './component/mapa/mapa.component';
   declarations: [
     NavComponent,
     CardSensoresComponent,
-    MapaComponent
+    MapaComponent,
+    TablaDatosSensorComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { MapaComponent } from './component/mapa/mapa.component';
   exports: [
     NavComponent,
     CardSensoresComponent,
-    MapaComponent
+    MapaComponent,
+    TablaDatosSensorComponent
   ]
 })
 export class SharedModule { }
