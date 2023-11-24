@@ -14,11 +14,17 @@ export class CardSensoresComponent implements OnInit {
   longitud!: number;
   latitud!: number;
 
+  public hasLoaded: boolean = false;
+
+  constructor(){
+  }
+
   ngOnInit(): void {
     this.longitud = Number.parseFloat(this.sensor.longitud.valueOf());
     this.latitud = Number.parseFloat(this.sensor.latitud.valueOf());
-    console.log(this.longitud);
-    console.log(this.latitud);
+    setTimeout( () =>{
+      this.hasLoaded = true;
+    }, 5000 );
   }
 
 

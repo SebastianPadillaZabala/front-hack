@@ -1,48 +1,50 @@
 <h2 class="w-full text-center text-xl pb-2 pt-4">Registrar Sensor</h2>
 
-<mat-card >
-  <mat-card-content class="place-self-center shadow-xl">
+<div class="w-full h-full flex justify-center">
+  <mat-card class="max-w-sm bg-white border border-gray-200 rounded-lg shadow" >
+    <mat-card-content>
 
-    <form class="h-full grid grid-cols-1 md:grid-cols-2 " [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <form class="h-full grid grid-cols-1 md:grid-cols-2 " [formGroup]="myForm" (ngSubmit)="onSubmit()">
 
-      <mat-form-field class="col-6 px-1 py-1">
-        <mat-label>Nombre:</mat-label>
-        <input matInput type="text" required formControlName="nombre" />
-      </mat-form-field>
+        <mat-form-field class="py-1" appearance="fill">
+          <mat-label class="px-1">Nombre:</mat-label>
+          <input matInput type="text" required formControlName="nombre" />
+        </mat-form-field>
 
-      <mat-form-field class="col-6 px-1 py-1">
-        <mat-label>Puerto:</mat-label>
-        <input matInput type="text" required formControlName="puerto" />
-      </mat-form-field>
+        <mat-form-field class="py-1" appearance="fill">
+          <mat-label class="px-1">Puerto:</mat-label>
+          <input matInput type="text" required formControlName="puerto" />
+        </mat-form-field>
 
-      <mat-form-field class="col-6 px-1 py-1">
-        <mat-label>Longitud:</mat-label>
-        <input matInput type="text" required formControlName="longitud" />
-      </mat-form-field>
+        <mat-form-field class="py-1" appearance="fill">
+          <mat-label>Longitud:</mat-label>
+          <input matInput type="text" required formControlName="longitud" />
+        </mat-form-field>
 
-      <mat-form-field class="col-6 px-1 py-1">
-        <mat-label>Latitud:</mat-label>
-        <input matInput type="text" required formControlName="latitud" />
-      </mat-form-field>
+        <mat-form-field class="py-1" appearance="fill">
+          <mat-label>Latitud:</mat-label>
+          <input matInput type="text" required formControlName="latitud" />
+        </mat-form-field>
 
-      <mat-form-field class="col-6 px-1 py-1">
-        <mat-label>URL Imagen:</mat-label>
-        <input matInput type="text" required formControlName="imagen" />
-      </mat-form-field>
+        <mat-form-field class="col-span-2 py-1">
+          <mat-label>URL Imagen:</mat-label>
+          <input matInput type="text" required formControlName="imagen" />
+        </mat-form-field>
 
-      <span class="col-span-1"></span>
+        <span class="col-span-1"></span>
 
-      <div class="col-span-2 justify-center flex w-full justify-content-between">
-        <div class="place-self-center">
-          <button class="bg-amber-600 hover:bg-amber-600" mat-button color="primary" type="submit">
-            Guardar
-          </button>
-          <button mat-flat-button type="submit" (click)="cancelar()" style="background-color: #e0d3d3;" class="ml-5">
-              Cancelar
-          </button>
+        <div class="col-span-2 justify-center flex w-full justify-content-between">
+          <div class="place-self-center">
+            <button class="bg-amber-600 hover:bg-amber-600" mat-button color="primary" type="submit">
+              Guardar
+            </button>
+            <button mat-flat-button type="submit" (click)="cancelar()" style="background-color: #e0d3d3;" class="ml-5">
+                Cancelar
+            </button>
+          </div>
+
         </div>
-
-      </div>
-    </form>
-  </mat-card-content>
-</mat-card>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
