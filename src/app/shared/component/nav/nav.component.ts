@@ -20,6 +20,10 @@ export class NavComponent {
         this.route.navigate(['/registrar-sensor']);
         break;
       }
+      case 'mapa': {
+        this.route.navigate(['/mapa']);
+        break;
+      }
       default: {
         break;
       }

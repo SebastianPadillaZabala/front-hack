@@ -5,6 +5,7 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
 import { ShowComponent } from './pages/show/show.component';
 import { MapaPageComponent } from './pages/mapa-page/mapa-page.component';
+import { TestPageComponent } from './pages/test-page/test-page.component';
 
 const routes: Routes = [
 
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'mapa',
         component: MapaPageComponent
+      },
+      {
+        path: 'test',
+        component: TestPageComponent
       },
       {
         path: '',
