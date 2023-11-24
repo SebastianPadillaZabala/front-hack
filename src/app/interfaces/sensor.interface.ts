@@ -9,9 +9,17 @@ export interface Sensor {
   id: number;
   nombre: String;
   puerto: String;
-  longitud: number;
-  latitud: number;
+  longitud: String;
+  latitud: String;
   imagen: String;
   estado: String;
-  data: dato[]
+  data?: dato[]
+}
+
+export interface SensorNew {
+  nombre: String;
+  puerto: String;
+  longitud: String;
+  latitud: String;
+  imagen: String;
 }

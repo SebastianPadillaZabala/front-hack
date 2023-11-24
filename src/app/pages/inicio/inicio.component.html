@@ -6,7 +6,7 @@
 </div>
 
 <div class="m-4 p-4 grid grid-cols-3 gap-8">
-  <shared-card-sensores (click)="redirectToShow(1)" *ngFor="let sensor of sensores" />
+  <shared-card-sensores [sensor]="sensor" (click)="redirectToShow(sensor.id)" *ngFor="let sensor of sensores" />
 
 </div>
 
