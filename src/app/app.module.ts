@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowComponent } from './pages/show/show.component';
 import { MapaPageComponent } from './pages/mapa-page/mapa-page.component';
+import { ServicesService } from './services/services.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,13 +31,13 @@ import { MapaPageComponent } from './pages/mapa-page/mapa-page.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-
     MaterialModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ ServicesService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

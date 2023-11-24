@@ -12,7 +12,7 @@ import { TablaDatosSensorComponent } from './component/tabla-datos-sensor/tabla-
     NavComponent,
     CardSensoresComponent,
     MapaComponent,
-    TablaDatosSensorComponent
+    TablaDatosSensorComponent,
   ],
   imports: [
     CommonModule
