@@ -16,8 +16,8 @@ export class RegistrarComponent implements OnInit{
   public myForm: FormGroup = this.fb.group({
     nombre: ['',[Validators.required]],
     puerto: ['',[Validators.required]],
-    longitud: [0,[Validators.required]],
-    latitud: [0,[Validators.required]],
+    longitud: ['',[Validators.required]],
+    latitud: ['',[Validators.required]],
     imagen: ['',[Validators.required]],
   });
 
