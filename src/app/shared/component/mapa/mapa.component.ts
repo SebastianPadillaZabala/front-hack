@@ -3,7 +3,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ElementRef, ViewChild, Renderer2 } from '@angular/core'
 
-
 @Component({
   selector: 'shared-mapa',
   templateUrl: './mapa.component.html',

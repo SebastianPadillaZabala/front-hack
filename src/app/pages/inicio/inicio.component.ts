@@ -15,7 +15,6 @@ export class InicioComponent implements OnInit{
 
   ngOnInit(): void {
     this.sensorService.getAll().subscribe(resp =>{
-      console.log(resp);
       if (!resp) return;
       this.sensores = resp;
       console.log(this.sensores);
@@ -23,7 +22,8 @@ export class InicioComponent implements OnInit{
   }
 
   redirectToShow(id : number){
-    this.route.navigate(['/show-sensor/12']);
+    console.log(id);
+    this.route.navigate([`/show-sensor/${id.toString()}`]);
   }
 
 }

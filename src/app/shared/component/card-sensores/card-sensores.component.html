@@ -1,12 +1,12 @@
 <div class="flex flex-col bg-white shadow-lg shadow-gray-500 rounded-lg w-full ">
   <div class="w-full grid grid-cols-2">
-    <img class="w-full h-44 rounded-t-lg pl-4 pr-2 py-4 object-cover" src="https://i.pinimg.com/564x/b5/bc/1e/b5bc1ecf8152062cc6a8c5ff69176609.jpg">
+    <img class="w-full h-44 rounded-t-lg pl-4 pr-2 py-4 object-cover" src="{{sensor.imagen}}">
 
     <div class="pl-2 pr-4 py-4 w-full">
-      <p class="text-red-800 font-bold uppercase">Sensor 2</p>
+      <p class="text-red-800 font-bold uppercase">{{sensor.nombre}}</p>
       <p class="!mb-0 !pb-0"> Estado:
         <span>
-          ppm
+          {{sensor.estado}}
         </span>
       </p>
       <p>ppm</p>
@@ -14,7 +14,7 @@
   </div>
 
   <div class="flex flex-col pb-4 px-4">
-    <shared-mapa [alto]="'52'" [ancho]="'96'" [latitud]="-17.791425" [longitud]="-63.169433"/>
+    <shared-mapa [alto]="'52'" [ancho]="'96'" [latitud]="latitud" [longitud]="longitud"/>
   </div>
 
 

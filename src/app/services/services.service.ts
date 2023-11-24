@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of } from 'rxjs';
 
 import { environment } from 'src/environments/environment';
-import { Sensor } from '../interfaces/sensor.interface';
+import { Sensor, SensorNew } from '../interfaces/sensor.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -22,15 +22,14 @@ export class ServicesService {
   }
 
   getById(id: number): Observable<Sensor | undefined> {
-    return this.http.get<Sensor>(`${this.baseUrl}sensor/:${id}`)
+    return this.http.get<Sensor>(`${this.baseUrl}sensor/${id}`)
     .pipe(
       catchError(err => of(undefined))
     );
   }
 
-  create( sensor: Sensor): Observable<Sensor| undefined> {
-    const {id, ... rest} = sensor;
-    return this.http.post<Sensor>(`${this.baseUrl}`, rest)
+  create(sensor: SensorNew): Observable<Sensor| undefined> {
+    return this.http.post<Sensor>(`${this.baseUrl}sensor`, sensor)
       .pipe(catchError(err => of(undefined)));
   }
 }
